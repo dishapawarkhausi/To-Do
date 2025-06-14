@@ -109,6 +109,12 @@ for i, task_obj in enumerate(st.session_state.tasks):
     with col2:
         if st.session_state.edit_index == i:
             updated_task = st.text_input("📝 Edit Task", value=task_obj["task"], key=f"task_input_{i}")
+            updated_type = st.selectbox(
+             "📌 Edit Task Type",
+            ["🏫 Study", "💼 Work", "🏠 Personal", "🧹 Chores", "📚 Reading", "➕ Other"],
+            index=["🏫 Study", "💼 Work", "🏠 Personal", "🧹 Chores", "📚 Reading", "➕ Other"].index(task_obj.get("type", "➕ Other")),
+             key=f"type_{i}"
+    )
             updated_due = st.date_input("📅 Due Date", value=datetime.strptime(task_obj.get("due", date.today().strftime("%Y-%m-%d")), "%Y-%m-%d").date(), key=f"due_{i}")
 
             if st.button("💾 Save", key=f"save_{i}"):
