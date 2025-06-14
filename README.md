@@ -6,13 +6,13 @@ A simple and interactive To-Do List web application built with Streamlit. This a
 
 ## Features
 
-- Add new tasks with task name, type, and due date.
-- Edit existing tasks including all details.
-- Mark tasks as completed or pending.
-- Delete tasks.
-- View all tasks in a summary table.
-- Tasks saved locally in `tasks.json` file.
-- Filter and reminder support can be added easily.
+- 🔐 **User Authentication**: Register and login with username and password
+- 🧍 **Multi-user Support**: Each user sees only their own tasks
+- ✅ **Task Management**: Add, edit, delete, and mark tasks as complete
+- 📅 **Due Dates**: Optional due dates for tasks
+- 📊 **Task Overview**: View task status summary
+- 🔓 **Logout Feature**: Secure logout for switching users
+- ☁️ **Streamlit Cloud Deployable**: Fully functional for web deployment
 
 ---
 
@@ -54,9 +54,13 @@ The app will open in your default browser. You can add, edit, and manage your ta
 
 ## File Structure
 
-- `app.py` - Main Streamlit app source code.
-- `tasks.json` - JSON file storing tasks data (created automatically).
-- `README.md` - Project documentation.
+```plaintext
+📦 project/
+│
+├── app.py              # Main Streamlit app
+├── users.json          # Stores registered user credentials
+├── tasks_<username>.json # Individual task files per user (auto-created)
+├── README.md           # Project documentation
 
 ---
 
@@ -91,6 +95,6 @@ Created by [Disha Pawar]
 
 ## 🔗 Live App
 
-You can try the app live here: [Open To-Do App](https://your-app-link.streamlit.app)  
+You can try the app live here: [Open To-Do App](https://to-do-webapp.streamlit.app/)  
 
 ---
