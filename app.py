@@ -115,7 +115,7 @@ for i, task_obj in enumerate(st.session_state.tasks):
                 st.session_state.tasks[i] = {
                     "task": updated_task.strip(),
                     "completed": task_obj["completed"],
-                    "type": "➕ Other",
+                    "type": task_type,
                     "due": updated_due.strftime("%Y-%m-%d"),
                 }
                 st.session_state.edit_index = None
