@@ -8,7 +8,13 @@ st.set_page_config(page_title="To-Do App", layout="centered")
 
 st.title("📝 :blue[Simple To-Do List App]")
 
-TASKS_FILE = "tasks.json"
+username = st.text_input("👤 Enter your username to access your tasks")
+
+if not username:
+    st.warning("Please enter your username to continue.")
+    st.stop()
+
+TASKS_FILE = f"tasks_{username}.json"
 
 def load_tasks():
     if os.path.exists(TASKS_FILE):
