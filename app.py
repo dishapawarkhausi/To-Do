@@ -93,7 +93,7 @@ st.divider()
 st.subheader("📌 Your Tasks:")
 
 for i, task_obj in enumerate(st.session_state.tasks):
-    col1, col2, col3 = st.columns([6, 1.5, 1.5])
+    col1, col2, col3 = st.columns([6, 2.5, 1.5])
 
     with col1:
         if st.session_state.edit_index == i:

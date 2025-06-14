@@ -51,19 +51,6 @@ streamlit run app.py
 The app will open in your default browser. You can add, edit, and manage your tasks easily.
 
 ---
-
-## File Structure
-
-```plaintext
-📦 project/
-│
-├── app.py              # Main Streamlit app
-├── users.json          # Stores registered user credentials
-├── tasks_<username>.json # Individual task files per user (auto-created)
-├── README.md           # Project documentation
-
----
-
 ## How It Works
 
 - Tasks are stored as dictionaries containing:
@@ -97,4 +84,3 @@ Created by [Disha Pawar]
 
 You can try the app live here: [Open To-Do App](https://to-do-webapp.streamlit.app/)  
 
----
