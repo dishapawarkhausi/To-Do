@@ -83,7 +83,7 @@ if st.button("Add Task"):
         st.session_state.tasks.append({
             "task": new_task.strip(),
             "completed": False,
-            "type": "➕ Other",
+            "type": task_type,
             "due": due_date.strftime("%Y-%m-%d")
         })
         save_tasks()
